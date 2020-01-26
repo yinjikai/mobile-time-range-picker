@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+#app {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.wrap {
+    position: relative;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 1920px;
+    .inner {
+        height: 1920px;
+    }
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .bg {
+        left: 60px;
+    }
+
+    .hour-line-wrap,
+    .current-time-line-wrap {
+        position: absolute;
+        width: 100%;
+        font-size: 0;
+    }
+
+    .hour-line,
+    .current-time-line {
+        display: inline-block;
+        width: calc(100% - 50px);
+        height: 1px;
+
+        vertical-align: top;
+        // vertical-align: middle;
+    }
+
+    .hour-line {
+        background: #6cc2e2;
+    }
+
+    .selected-area,
+    .disabled-time {
+        position: absolute;
+        width: 80%;
+        right: 0;
+        background: yellow;
+    }
+    .disabled-time {
+        background: gray;
+    }
+    .hour-text,
+    .current-time-text {
+        margin-right: 10px;
+        font-size: 12px;
+        margin-top: -8px;
+        display: inline-block;
+    }
+
+    .bg {
+        position: absolute;
+    }
+
+    .current-time-line {
+        background: red;
+    }
+
+    .submit-btn {
+        position: absolute;
+        background: #fff;
+        top: 100%;
+        right: 20px;
+        width: 61px;
+        height: 30px;
+        line-height: 30px;
+
+        span {
+            display: inline-block;
+            font-size: 14px;
+            color: blue;
+
+            &:first-of-type {
+                margin-right: 5px;
+                color: #a5a5a5;
+            }
+        }
+    }
+}
